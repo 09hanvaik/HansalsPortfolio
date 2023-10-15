@@ -3,6 +3,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Body's background colour */
@@ -11,21 +12,14 @@ body {
 }
 
 /*The font, background colour and text colour of the header and navigation links*/
-.header {
+header {
   padding-right: 60px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #e9e9e9;
   color: #ffffff;
   display: flex;
+  flex-direction: row wrap;
   justify-content: space-between;
 }
-
-/* Horiseon's font size */
-.header h1 {
-  display: inline-block;
-  font-size: 48px;
-}
-
 
 .header img {
   height: 20%;
@@ -38,7 +32,6 @@ body {
   padding-top: 60px;
   padding-left: 60px;
   float: right;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
 }
 
@@ -64,6 +57,7 @@ p {
   font-size: 16px;
 }
 
+
 /* Body image's size and position */
 .hero {
   height: 800px;
@@ -73,86 +67,92 @@ p {
   background-size: cover;
   background-position: center;
 }
-
-/* Image alignment for the three main sections */
-.float-left {
-  float: left;
-  margin-right: 25px;
-}
-
-.float-right {
-  float: right;
-  margin-left: 25px;
-}
-
-/*Three section's background colour, text colour and font style */
-.Project-One, .Project-Two, .Project-Three {
-  margin-bottom: 20px;
-  padding: 50px;
-  height: 300px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #000000;
+figcaption {
+  position: relative;
+  top: 70%;
+  text-align: right;
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.5;
+  background: #272626;
   color: #ffffff;
+  padding-right: 35px;
 }
 
-/* Section's image size */
-.Project-One img, .Project-Two img, .Project-Three img {
-  max-height: 200px;
-}
-
-/* Section's header alignment and font size  */
-.Project-One h2, .Project-Two h2, .Project-Three h2 {
-  margin-bottom: 20px;
-  font-size: 36px;
-}
-
-/* Section's alignment */
-.content {
-  width: 75%;
-  display: inline-block;
-  margin-left: 20px;
-}
-
-/* Sidebar's text font and size */
-.benefits {
-  margin-right: 20px;
-  padding: 20px;
-  clear: both;
-  float: right;
-  width: 20%;
-  height: 100%;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.Projects{
   background-color: #000000;
+  display: grid;
+  grid-template-rows: 1fr, 1fr, 1fr 1fr;
+  grid-template-columns: 1fr, 1fr, 1fr 1fr;
+  grid-template-areas: 
+  "Project-One Project-One Project-One Project-One"
+  "Project-One Project-One Project-One Project-One"
+  "Project-Two Project-Two Project-Three Project-Three";
 }
 
-/* Text alignment for sidebar */
-.benefit-lead h3, .benefit-brand, .benefit-cost {
+#Project-One {grid-area: Project-One;}
+#Project-Two {grid-area: Project-Two;}
+#Project-Three {grid-area: Project-Three;}
+
+
+/* Section's text alignment */
+#Project-One h3, #Project-Two h3, #Project-Three h3 {
   margin-bottom: 10px;
   text-align: center;
 }
 
-/* Sidebar's text colour and alignment for sidebar */
-.benefit-lead, .benefit-brand, .benefit-cost {
+/* Section's text colour and alignment for sidebar */
+#Project-One, #Project-Two, #Project-Three {
   margin-bottom: 32px;
   color: #ffffff;
 }
 
-/* Sizebar image alignment */
-.benefit-lead img, .benefit-brand img, .benefit-cost img {
-  display: block;
-  margin: 10px auto;
-  max-width: 150px;
+.article-images-texts {
+  display: flex;
+  justify-content: space-between
 }
 
-/* Footer alignment and text style */
-.footer {
-  padding: 30px;
-  clear: both;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-align: center;
+/* Section's image alignment */
+#Project-One img, #Project-Two img, #Project-Three img {
+  object-fit: cover;
+  width: 10%;
+  max-height: 10%;
 }
 
-/* Footer text size */
-.footer h2 {
-  font-size: 20px;
+#About-Me{
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-between;
+  }
+
+footer {
+  padding-left: 4%;
+  padding-right: 75%;
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: space-around;
+  }
+
+/* Take out navigation's unordered list's markings */
+  footer nav ul {
+    list-style-type: circle;
+
+  }
+  
+  /* Display list inline with the footer Contact Me */
+  footer nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+    padding-top: 1%;
+    
+  }
+
+#Contact {
+  border-right: 100px;
+  border-right: #000000;
 }
+#Info{
+  padding-left: 4%;
+  padding-right: 75%;
+  display: flex;
+}  

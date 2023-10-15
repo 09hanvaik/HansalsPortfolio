@@ -4,10 +4,13 @@
 
 This project is to display my work to potential employers and colleagues.
 The requirements (in the form of Acs) to make this first draft are being taken directly from EdX FE Bootcamp second challenge's description. 
-The HTML and CSS have been adapted from the first challenge's file but optimised to be responsive by me.
+The HTML and CSS have been adapted from the first challenge's file but optimised to be responsive by me. This is done by adding flexboxes and css grids to the elements.
+Please view the 'Credits' section below for the sources I used to implement my ideas.
 
 
 ## Acceptance Criteria
+
+This section is taken directly from EdX FE Bootcamp second challenge's description:
 
 Here are the critical requirements necessary to develop a portfolio that satisfies a typical hiring manager’s needs:
 
@@ -31,4 +34,6 @@ No installation steps required.
 ## Credits
 
 Skills for Life/EdX FE bootcamp course 2023/24.
-Idea to use logo to go back to homepage by Moin Zaman on Stackovberflow. Link: https://stackoverflow.com/questions/11701311/logo-image-and-h1-heading-on-the-same-line
+Idea to use logo to go back to homepage by 'Moin Zaman' on Stack Overflow. Link: https://stackoverflow.com/questions/11701311/logo-image-and-h1-heading-on-the-same-line
+Idea to use separate the header items (pure flexbox option) by 'spflow' on Stack OverFlow. Link: https://stackoverflow.com/questions/35269947/how-can-i-align-one-item-right-with-flexbox
+
