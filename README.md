@@ -31,3 +31,4 @@ No installation steps required.
 ## Credits
 
 Skills for Life/EdX FE bootcamp course 2023/24.
+Idea to use logo to go back to homepage by Moin Zaman on Stackovberflow. Link: https://stackoverflow.com/questions/11701311/logo-image-and-h1-heading-on-the-same-line
