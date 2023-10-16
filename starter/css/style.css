@@ -19,11 +19,40 @@ body {
   grid-template-rows: repeat(auto, 6);
   grid-template-areas:
       "logo"
-      "sect1"
-      "sect1"
-      "sect2"
-      "sect3"
+      "Project-One"
+      "Project-One"
+      "Project-Two"
+      "Project-Three"
       "footer"; 
+}
+
+/* Navigation links' position, font and size */
+#navigation {
+  grid-area: navigation;
+  display: inline;
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+/* Take out navigation's unordered list's markings */
+#navigation ul, aside ul {
+  list-style-type: none;
+}
+
+/* Display list inline */
+#navigation ul li {
+  display: inline-block;
+  margin-left: 10%;
+}
+
+
+/* Remove navigation's underlines */
+a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 aside {
@@ -31,20 +60,18 @@ aside {
   background-color: #007FFF;
 }
 
+aside ul li {
+  margin-left: 10%;
+  line-height: 100px;
+}
+
 header {
-  background-color: #91C8FF;
+  background-color: #dbcb81;
 }
 #logo{
   grid-area: logo;
 }
-#logo img{
-  height: 100%;
-  width: 100%;
-}
-#navigation{
-  display: inline;
-  grid-area: navigation;
-}
+
 #hero {
   grid-area: hero;
   max-height: 100%;
@@ -54,29 +81,73 @@ header {
   background-size: cover;
   background-position: center;
 }
-figcaption {
+
+#hero figcaption {
+  width: 40%;
   position: relative;
-  top: 70%;
+  top: 150px;
+  left: 700px;
   text-align: right;
   font-size: 22px;
   font-style: italic;
   line-height: 1.5;
-  background: #272626;
+  background: #000000;
   color: #ffffff;
-  padding-right: 35px;
+  padding-right: 20px;
 }
+
+#Project-One figcaption, #Project-Two figcaption, #Project-Three figcaption {
+  width: 150px;
+  position: relative;
+  bottom: 100px;
+  left: 1px;
+  text-align: right;
+  font-size: 10px;
+  font-style: italic;
+  background: #000000;
+  color: #ffffff;
+  padding-right: 20px;
+}
+
+#About-Me {
+  grid-area: About-Me;
+  background-color: #74c235;
+}
+
 #Project-One {
   grid-area: Project-One;
-  background-color: #B3D8FD;
+  background-color: #b1d891;
 }
+
+
+
 #Project-Two {
   grid-area: Project-Two;
-  background-color: #5E86AF;
+  background-color: #ad6a6a;
 }
+
 #Project-Three {
   grid-area: Project-Three;
-  background-color: #6D9FD2;
+  background-color: #c66dd2;
 }
+
+#Project-One, #Project-Two, #Project-Three {
+padding: 10px;
+}
+
+#Project-One img {
+  max-height: 470px;
+  width: 100%;
+  object-fit: cover;
+}
+
+#Project-Two img, #Project-Three img, #logo img {
+  max-height: 225px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
 footer {
   grid-area: footer;
   background-color: #000000;
@@ -87,11 +158,12 @@ footer {
   body {
       margin: 0;
       display: grid;
-      grid-template-columns: auto 27% 27% 27%;
-      grid-template-rows: auto 20% 20% 20% 20% auto;
+      grid-template-columns: auto 30% 30% 30%;
+      grid-template-rows: 5% 20% 10% 20% 20% 20% auto;
       grid-template-areas:
           "logo navigation navigation navigation"
           "hero hero hero hero"
+          "sidebar About-Me  About-Me  About-Me"
           "sidebar Project-One  Project-One  Project-One"
           "sidebar Project-One  Project-One  Project-One"
           "sidebar Project-Two   Project-Two   Project-Three"
