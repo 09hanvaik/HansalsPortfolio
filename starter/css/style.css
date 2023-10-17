@@ -6,11 +6,8 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-body, html {
-  height: 100%;
-}
 
-/* Body's background colour */
+/* Body's background colour and apply the below CSS Grid template for all screen size below min width */
 body {
   background-color: #d9dcd6;
   margin: 0;
@@ -24,6 +21,26 @@ body {
       "Project-Two"
       "Project-Three"
       "footer"; 
+}
+
+/* Apply the below CSS Grid template for all screen size above min width */
+@media only screen and (min-width: 768px) {
+
+  body {
+      margin: 0;
+      display: grid;
+      grid-template-columns: auto 30% 30% 30%;
+      grid-template-rows: repeat(7, auto);
+      grid-template-areas:
+          "logo navigation navigation navigation"
+          "hero hero hero hero"
+          "sidebar About-Me  About-Me  About-Me"
+          "sidebar Project-One  Project-One  Project-One"
+          "sidebar Project-One  Project-One  Project-One"
+          "sidebar Project-Two   Project-Two   Project-Three"
+          "footer footer footer footer";
+  }
+
 }
 
 /* Navigation links' position, font and size */
@@ -50,17 +67,19 @@ ul li {
 }
 
 
-/* Remove navigation's underlines */
+/* Colour of the a elements */
 a {
   color: #000000;
   text-decoration: none;
 }
 
+/* Sidebar's CSS grid name and background colour */
 aside {
   grid-area: sidebar;
   background-color: #ffffff;
 }
 
+/* Sidebar's list spacing */
 aside ul li {
   vertical-align: top;
   top: 1px;
@@ -68,21 +87,25 @@ aside ul li {
   line-height: 150px;
 }
 
+/* Header's CSS grid name and background colour */
 header {
   background-color: #ffffff;
   text-align: center;
 }
 
+/* Logo's CSS grid name */
 #logo{
   grid-area: logo;
 }
 
+/* Logo's image sizing */
 #logo img {
   width: 100%;
   object-fit: cover;
 
 }
 
+/* Hero's CSS grid name and colour */
 #hero {
   grid-area: hero;
   max-height: 100%;
@@ -94,7 +117,7 @@ header {
   background-position: center;
 }
 
-
+/* Hero's caption, alignment and colour */
 #hero figcaption {
   width: 40%;
   position: relative;
@@ -108,6 +131,42 @@ header {
   padding-right: 20px;
 }
 
+/* About Me's CSS grid name and background colour */
+#About-Me {
+  grid-area: About-Me;
+  background-color: #ffffff;
+}
+
+/* About Me's p element position */
+#About-Me p {
+  position: relative;
+}
+
+/* Project One's CSS grid name and background colour */
+#Project-One {
+  grid-area: Project-One;
+  background-color: #ffffff;
+}
+
+/* Project Two's CSS grid name and background colour */
+#Project-Two {
+  grid-area: Project-Two;
+  background-color: #ffffff;
+}
+
+/* Project Three's CSS grid name and background colour */
+#Project-Three {
+  grid-area: Project-Three;
+  background-color: #ffffff;
+}
+
+/*All three section's padding*/
+#Project-One, #Project-Two, #Project-Three {
+padding: 10px;
+}
+
+
+/* All three section's caption, alignment and background colour */
 #Project-One figcaption, #Project-Two figcaption, #Project-Three figcaption {
   width: 150px;
   position: relative;
@@ -119,40 +178,9 @@ header {
   background: #000000;
   color: #ffffff;
   padding-right: 20px;
-}
+} 
 
-#About-Me {
-  grid-area: About-Me;
-  background-color: #ffffff;
-}
-
-#About-Me p {
-  position: relative;
-}
-
-
-
-#Project-One {
-  grid-area: Project-One;
-  background-color: #ffffff;
-}
-
-
-
-#Project-Two {
-  grid-area: Project-Two;
-  background-color: #ffffff;
-}
-
-#Project-Three {
-  grid-area: Project-Three;
-  background-color: #ffffff;
-}
-
-#Project-One, #Project-Two, #Project-Three {
-padding: 10px;
-}
-
+/* Project One's image size and transition time */
 #Project-One img {
   max-height: 475px;
   width: 100%;
@@ -161,6 +189,7 @@ padding: 10px;
   transition: 1s ease;
 }
 
+/* Project Two and Three's image size and transition time */
 #Project-Two img, #Project-Three img {
   max-height: 230px;
   width: 100%;
@@ -169,40 +198,21 @@ padding: 10px;
   transition: 1s ease;
 }
 
+/* All three section's box shadow and transition time */
 #Project-One img:hover, #Project-Two img:hover, #Project-Three img:hover{
   opacity:1;
   box-shadow: 0 0 0 10px #000000;
   transition: 1s ease;
   }
 
+/* Footer's CSS grid name and background colour */
 footer {
   grid-area: footer;
   background-color: #ffffff;
 }
 
-
+/* Footer's h2 alignment */
 #Contact h2{
   margin-left: 20px;
   padding-top: 5px;
-}
-
-
-
-@media only screen and (min-width: 768px) {
-
-  body {
-      margin: 0;
-      display: grid;
-      grid-template-columns: auto 30% 30% 30%;
-      grid-template-rows: repeat(7, auto);
-      grid-template-areas:
-          "logo navigation navigation navigation"
-          "hero hero hero hero"
-          "sidebar About-Me  About-Me  About-Me"
-          "sidebar Project-One  Project-One  Project-One"
-          "sidebar Project-One  Project-One  Project-One"
-          "sidebar Project-Two   Project-Two   Project-Three"
-          "footer footer footer footer";
-  }
-
 }
