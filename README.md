@@ -37,3 +37,6 @@ Skills for Life/EdX FE bootcamp course 2023/24.
 Idea to use logo to go back to homepage by 'Moin Zaman' on Stack Overflow. Link: https://stackoverflow.com/questions/11701311/logo-image-and-h1-heading-on-the-same-line
 Idea to use separate the header items (pure flexbox option) by 'spflow' on Stack OverFlow. Link: https://stackoverflow.com/questions/35269947/how-can-i-align-one-item-right-with-flexbox
 Used the template for css grids from from "designcourse". Link: https://github.com/designcourse/grid-template-areas-tutorial/blob/master/main.css#L6
+Css Hover fade in and border effects from Brandsmen. Link: https://thebrandsmen.com/css-image-hover-effects/
+Open Email client. Link: https://css-tricks.com/all-about-mailto-links/
+
